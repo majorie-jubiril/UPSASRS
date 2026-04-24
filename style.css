@@ -1896,13 +1896,13 @@ width: 100%;
    CASE STUDY
 ========================= */
 .case-study {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
 
 .case-study section {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .case-study h1 {
@@ -1911,18 +1911,34 @@ width: 100%;
 }
 
 .case-study h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #1a3d7c;
 }
 
-.case-study p, .case-study li {
-  line-height: 1.6;
-  font-size: 16px;
+.case-study h3 {
+  margin-bottom: 8px;
 }
 
+.case-study p,
+.case-study li {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+/* HERO */
 .cs-hero {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
+}
+
+.cs-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #666;
+  margin: 15px 0;
 }
 
 .primary-btn {
@@ -1936,31 +1952,55 @@ width: 100%;
 }
 
 /* ======================
-   CASE STUDY IMAGES
+   WALKTHROUGH
 ========================= */
-.cs-images {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  margin-top: 20px;
+
+.cs-step {
+  margin-bottom: 50px;
 }
 
-.cs-images img {
+.cs-step p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* ======================
+   IMAGES
+========================= */
+
+.cs-images {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cs-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.cs-group img {
   width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.cs-group img:hover {
+  transform: scale(1.02);
 }
 
 /* Desktop layout */
 @media (min-width: 768px) {
-  .cs-images {
+  .cs-group {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .img-caption {
+  grid-column: 1 / -1;
+  text-align: center;
   font-size: 14px;
   color: #666;
-  margin-top: 6px;
-  text-align: center;
 }
