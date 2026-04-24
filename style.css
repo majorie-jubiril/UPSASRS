@@ -2017,3 +2017,23 @@ width: 100%;
   color: #1a3d7c;
   border: 1px solid #1a3d7c;
 }
+
+.cs-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  display: inline-block;
+}
+
+.secondary-btn {
+  padding: 12px 20px;
+  border: 1px solid #1a3d7c;
+  color: #1a3d7c;
+  text-decoration: none;
+  border-radius: 6px;
+}
