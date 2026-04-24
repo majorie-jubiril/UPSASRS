@@ -1934,3 +1934,33 @@ width: 100%;
   text-decoration: none;
   border-radius: 6px;
 }
+
+/* ======================
+   CASE STUDY IMAGES
+========================= */
+.cs-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.cs-images img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+  .cs-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.img-caption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 6px;
+  text-align: center;
+}
