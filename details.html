@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="container details-page">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <span class="back-arrow">←</span>
+      <div class="title-group">
+        <p class="page-label">Request Details</p>
+        <h2 id="detailTitle">—</h2>
+        <p id="detailId">Request #—</p>
+      </div>
+    </div>
+
+    <!-- STATUS -->
+    <div class="status-card">
+      <h3>Status</h3>
+      <div id="statusTracker" class="status-tracker"></div>
+    </div>
+
+    <!-- PAYMENT -->
+    <div class="info-card">
+      <h3>Payment</h3>
+      <div id="detailPayment"></div>
+    </div>
+
+    <!-- PROCESSING -->
+    <div class="info-card">
+      <h3>Processing</h3>
+      <div id="detailProcessing"></div>
+    </div>
+
+    <!-- DELIVERY -->
+    <div class="info-card">
+      <h3>Delivery</h3>
+      <div id="detailDelivery"></div>
+    </div>
+
+  </div> <!-- ✅ NOW correctly wraps EVERYTHING -->
+
+  <script src="script.js"></script>
+</body>
+</html>

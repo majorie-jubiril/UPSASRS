@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="system-header">
+    <div class="header-inner">
+      
+      <!-- 🔷 LEFT: LOGO -->
+      <div class="header-left">
+        <img src="images/upsa-logo-new.png" alt="UPSA Logo" class="header-logo">
+      </div>
+
+      <!-- 🔷 CENTER: TITLE -->
+      <div class="header-center">
+        <h1>UPSA Student Request System</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 📦 MAIN CONTENT (UNIFIED CONTAINER) -->
+  <div class="container request-page">
+
+    <!-- 🧭 WORKFLOW BAR -->
+    <div class="workflow-bar">
+      <div class="workflow-left">
+        <span class="back-arrow">←</span>
+
+        <div class="top-text">
+          <h3>Request Details</h3>
+          <p id="stepIndicator">Step 2 of 5</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📊 PROGRESS LINE -->
+    <div class="progress-steps">
+      <div class="step active"></div>
+      <div class="step active"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+      <div class="step"></div>
+    </div>
+
+    <!-- 📄 REQUEST DETAILS CARD -->
+    <div class="request-details-card">
+
+      <!-- 🔷 OUTER CARD HEADER -->
+      <div class="details-header">
+        <p class="section-label">REQUEST DETAILS</p>
+        <p class="card-subtitle">
+          Provide the required information for your request
+        </p>
+      </div>
+
+      <!-- 🔷 INNER FORM CARD -->
+      <div class="form-card">
+        <div id="formContainer" class="form-grid"></div>
+      </div>
+
+      <!-- 🔘 ACTION BUTTON -->
+      <div class="form-actions">
+        <button id="nextBtn" class="primary-btn" disabled>
+          Continue
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

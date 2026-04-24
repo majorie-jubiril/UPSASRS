@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+
+  <!-- GLOBAL HEADER -->
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h2>Admin Dashboard</h2>
+      <p>Manage and process student requests</p>
+    </div>
+
+    <!-- FILTER / STATUS BAR (Phase 2 ready) -->
+    <div class="admin-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Pending">Pending</button>
+      <button class="filter-btn" data-filter="In Progress">In Progress</button>
+      <button class="filter-btn" data-filter="Completed">Completed</button>
+    </div>
+
+    <!-- REQUEST LIST -->
+    <div id="adminRequestsContainer" class="admin-request-list">
+      <!-- JS WILL RENDER HERE -->
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

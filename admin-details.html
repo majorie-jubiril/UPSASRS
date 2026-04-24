@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Request Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-details-page">
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <div class="container">
+
+    <!-- BACK -->
+    <span class="back-arrow">← Back</span>
+
+    <!-- TITLE -->
+    <div class="page-header">
+      <h2 id="adminDetailTitle">Request</h2>
+      <p id="adminDetailId"></p>
+    </div>
+
+    <!-- GRID -->
+    <div class="admin-details-grid">
+
+      <!-- REQUEST INFO -->
+      <div class="details-card">
+        <h3>Request Information</h3>
+        <div id="adminRequestInfo"></div>
+      </div>
+
+      <!-- STUDENT INFO -->
+      <div class="details-card">
+        <h3>Student Details</h3>
+        <div id="adminStudentDetails"></div>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="details-card">
+        <h3>Payment Validation</h3>
+        <div id="adminPaymentInfo"></div>
+
+        <button id="validatePaymentBtn" class="primary-btn">
+          Validate Payment
+        </button>
+      </div>
+
+      <!-- STATUS CONTROL -->
+      <div class="details-card">
+        <h3>Update Status</h3>
+
+        <select id="statusSelect">
+          <option value="Submitted">Submitted</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+
+        <button id="updateStatusBtn" class="primary-btn">
+          Update Status
+        </button>
+      </div>
+
+      <!-- AUDIT TRAIL -->
+    <div class="details-card">
+        <h3>Audit Trail</h3>
+        <div id="auditTrail"></div>
+    </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

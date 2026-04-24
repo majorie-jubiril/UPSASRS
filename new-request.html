@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UPSASRS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PLATFORM HEADER -->
+  <div id="header-placeholder"></div>
+
+  <div class="container new-request-page">
+
+    <!-- REQUEST CONTEXT ROW -->
+    <div class="request-header-row">
+      <div class="request-context">
+        <span class="back-arrow">←</span>
+        <div>
+          <h3>Request Type</h3>
+          <p id="stepIndicator">Step 1 of 5</p>
+        </div>
+      </div>
+
+      <button id="continueBtn" class="primary-btn" disabled>
+        Continue
+      </button>
+    </div>
+
+    <!-- PROGRESS INDICATOR -->
+    <div class="progress-steps">
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+      <div class="step-dot"></div>
+    </div>
+
+    <!-- TRACKING PANEL -->
+    <div id="trackingPanel" class="tracking hidden">
+      <h3>Request Status</h3>
+      <div id="statusStepper" class="stepper"></div>
+      <p id="statusMessage"></p>
+
+      <div id="paymentStatusCard" class="status-card hidden">
+        <h4>Payment</h4>
+        <p id="paymentText">No payment yet</p>
+        <span id="paymentBadge"></span>
+      </div>
+
+      <div id="deliveryStatusCard" class="status-card hidden">
+        <h4>Delivery</h4>
+        <p id="deliveryText"></p>
+      </div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div id="step1" class="step">
+
+      <div class="request-panel">
+
+        <h2>Select Request Type</h2>
+
+        <div class="request-options-container">
+
+          <!-- CARD -->
+          <div class="request-card" data-type="transcript">
+            <div class="icon">📄</div>
+            <div class="card-content">
+              <h4>Transcript Request</h4>
+              <p>Official academic transcript</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="introductory_letter">
+            <div class="icon">📘</div>
+            <div class="card-content">
+              <h4>Introductory Letter</h4>
+              <p>Letter of introduction</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="attestation">
+            <div class="icon">🎓</div>
+            <div class="card-content">
+              <h4>Attestation Letter</h4>
+              <p>Letter of attestation</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="id_card">
+            <div class="icon">🪪</div>
+            <div class="card-content">
+              <h4>ID Card Replacement</h4>
+              <p>Student ID replacement</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="english_proficiency">
+            <div class="icon">🌍</div>
+            <div class="card-content">
+              <h4>English Proficiency Letter</h4>
+              <p>Proof of English proficiency</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="remarking">
+            <div class="icon">📝</div>
+            <div class="card-content">
+              <h4>Remarking of Scripts</h4>
+              <p>Request for script review</p>
+            </div>
+          </div>
+
+          <div class="request-card" data-type="refund">
+            <div class="icon">💰</div>
+            <div class="card-content">
+              <h4>Request for Refund</h4>
+              <p>Fee refund request</p>
+            </div>
+          </div>
+
+        </div> <!-- ✅ request-options-container -->
+
+      </div> <!-- ✅ request-panel -->
+
+    </div> <!-- ✅ step1 -->
+
+    <!-- STEP 2 -->
+    <div id="step2" class="step hidden">
+      <h2>Request Details</h2>
+
+      <div id="formContainer"></div>
+
+      <div class="actions">
+        <button id="backBtn">Back</button>
+        <button id="nextBtn" disabled>Continue</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="step3" class="step hidden">
+      <h2>Review & Submit</h2>
+
+      <div id="summary"></div>
+
+      <p><em>Please review your details and ensure your uploaded disbursement slip is correct before submitting.</em></p>
+
+      <div class="actions">
+        <button id="backToStep4Btn">Back</button>
+        <button id="submitBtn">Confirm & Submit Request</button>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div id="step4" class="step hidden">
+      <h2>Payment & Proof Upload</h2>
+
+      <p>Please complete payment via UFIS and upload disbursement slip.</p>
+
+      <a href="https://student.upsa-ufis.com/#/auth/login" target="_blank" id="ufisLink">
+        Go to UFIS Payment Portal
+      </a>
+
+      <br><br>
+
+      <label>Upload Disbursement Slip</label>
+      <input type="file" id="disbursementSlip">
+
+      <br><br>
+
+      <button id="submitFinalBtn" disabled>Submit Request</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

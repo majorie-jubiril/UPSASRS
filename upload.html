@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload & Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+    <div class="container">
+
+    <div class="top-bar">
+        <span class="back-arrow">←</span>
+          <div class="top-text">
+            <h3>Payment Upload</h3>
+            <p>Step 3 of 5</p>
+          </div>
+    </div>
+
+  <div class="progress-bar">
+    <div class="step active"></div>
+    <div class="step active"></div>
+    <div class="step active"></div>
+    <div class="step"></div>
+    <div class="step"></div>
+  </div>
+
+  <div class="section-header">
+    <h2>Payment & Upload</h2>
+    <p>Complete your payment, then upload your proof to proceed.</p>
+  </div>
+
+      <div class="payment-card">
+
+    <div class="card-header">
+      <h3>1. Make Payment</h3>
+      <span class="badge">External</span>
+    </div>
+
+    <div class="card-body">
+      <p id="requestTitle"></p>
+      <p id="serviceType"></p>
+
+      <div class="button-row">
+        <a href="https://student.upsa-ufis.com/#/auth/login" target="_blank" class="primary-btn">
+          Pay via UFIS
+        </a>
+      </div>
+
+      <p class="note">
+        You will be redirected to the official UPSA payment platform.
+      </p>
+    </div>
+
+</div>
+
+  <div class="upload-section">
+
+    <div class="card-header">
+      <h3>2. Upload Disbursement Slip</h3>
+      <span class="badge pending" id="uploadStatus">Pending</span>
+    </div>
+
+    <div class="upload-box" id="uploadBox">
+      <input type="file" id="disbursementSlip" hidden>
+
+      <div class="upload-content" id="uploadContent">
+        <div class="upload-icon" id="uploadIcon">⬆️</div>
+        <p id="uploadText"><strong>Click to upload disbursement slip</strong></p>
+        <p id="uploadSubtext">JPG, PNG or PDF</p>
+      </div>
+    </div>
+
+  <div class="info-box">
+    Your payment will be reviewed and validated by staff before processing begins.
+  </div> 
+
+</div>
+  <div class="button-row">
+    <button id="toReviewBtn" class="primary-btn" disabled>
+      Upload & Continue
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
