@@ -2004,3 +2004,16 @@ width: 100%;
   font-size: 14px;
   color: #666;
 }
+
+.cs-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #1a3d7c;
+  border: 1px solid #1a3d7c;
+}
