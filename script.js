@@ -9,6 +9,10 @@ const REQUEST_FLOW_CONFIG = {
   introductory_letter: { requiresPayment: true }
 };
 
+console.log(
+  JSON.parse(localStorage.getItem("requests"))
+);
+
 // ===========================
 // FORMAT UTILITIES
 // ===========================
@@ -61,13 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // GLOBAL PAGE DETECTION
   // ===========================
   const currentPage = window.location.href;
-
-  // ===========================
-  // ADMIN DASHBOARD
-  // ===========================
-  if (currentPage.includes("admin.html")) {
-    renderAdminRequests();
-  }
 
   // ===========================
   // ADMIN DASHBOARD
@@ -141,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===========================
   // DASHBOARD (INDEX PAGE)
   // ===========================
-  if (currentPage.includes("index.html") || currentPage === "/") {
+  if (currentPage.includes("dashboard.html") || currentPage === "/") {
     renderRequests();
   }
 
@@ -179,7 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ========================================
     // RENDER REQUEST CARDS / DASHBOARD (INDEX PAGE)
     // ========================================
-    container.innerHTML = requests.map(req => {
+    container.innerHTML = [...requests]
+      .reverse()
+      .map(req => {
 
       const formattedType =
         REQUEST_LABELS[req.type] ||
@@ -1036,7 +1035,7 @@ function setupSubmitHandler() {
     // ===========================
     alert("Request submitted successfully!");
 
-    window.location.href = "index.html";
+    window.location.href = "dashboard.html";
   });
 }
 
